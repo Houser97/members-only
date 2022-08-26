@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+let mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -10,6 +11,9 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 require('dotenv').config();
+
+//Establecer conexión con MongoDB
+let mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.7rahnnq.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
