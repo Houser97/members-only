@@ -19,6 +19,7 @@ form{
     transition: transform 400ms ease-in-out 0s, opacity 400ms ease-in-out 0s;
     opacity: 0;
     z-index: 3;
+    border: 2px white solid;
 }
 
 form h2 {

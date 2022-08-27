@@ -32,6 +32,7 @@ exports.user_create_post = [
                 title: 'Members Only', 
                 user: user,
                 errors: errors.array(),
+                openForm: true,
             });
             return;  
         } else {

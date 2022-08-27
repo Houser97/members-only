@@ -43,3 +43,8 @@ a {
   background-color: rgba(0, 0, 0, 0.287);
   display: none;
 }
+
+/* DIV para saber que abrir el formulario de SIGN UP */
+.valueToOpenForm{
+  display: none;
+}

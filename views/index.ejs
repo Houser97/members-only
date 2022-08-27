@@ -13,9 +13,14 @@
     <script src="/javascripts/header.js" defer></script>
     <script src="/javascripts/sign-up.js" defer></script>
 </head>
+<% let openFormValue = false;
+    if(locals.openForm){ 
+        openFormValue = true;
+    }    
+%>
 <body>
-    
     <%- include('./partials/header.ejs') %>
+    <div class="valueToOpenForm"><%- openFormValue %></div>
 
     <div class="window-protection"></div>
 
@@ -26,6 +31,5 @@
     </section>
 
     <%- include('./partials/footer.ejs') %>
-
 </body>
 </html>
