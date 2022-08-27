@@ -16,4 +16,8 @@ exports.user_create_post = [
                 .withMessage('Password must contain at least 1 uppercase letter')
                 .trim()
                 .escape(),
+
+    (req, res, next) => {
+
+    }
 ];
