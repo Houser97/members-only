@@ -2,6 +2,8 @@
 
 *{
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 header{
@@ -14,18 +16,23 @@ header{
     justify-content: space-between; align-items: center;
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 20px;
-  }
-  
-  header .button-header{
-    padding: 6px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 25px;
-  }
-  
-  header .log-in-button {
-    background-color: #00FF00;
-    margin-right: 14px;
-  }
+}
+
+header .button-header{
+padding: 6px 20px;
+cursor: pointer;
+border: none;
+border-radius: 10px;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-size: 25px;
+}
+
+header a {
+    background-color: white;
+    color: black;
+}
+
+header .log-in-button {
+background-color: #00FF00;
+margin-right: 14px;
+}
