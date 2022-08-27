@@ -28,7 +28,7 @@ form h2 {
     position: relative; /*Para contener SVG para cerrar FORM*/
 }
 
-form .sign-up-submit {
+form .log-in-submit {
     margin: 10px 0px 0px;
     font-size: 16px;
     padding: 10px 10px;
@@ -39,11 +39,11 @@ form .sign-up-submit {
     cursor: pointer;
 }
 
-.sign-up-submit:hover {
+.log-in-submit:hover {
     background-color: rgb(39, 205, 255);
 }
 
-.close-sign-up {
+.close-log-in {
     position: absolute;
     right: 15px;
     top: 12px;

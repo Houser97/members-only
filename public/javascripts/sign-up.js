@@ -9,4 +9,4 @@ signUpForm1.addEventListener('submit', (e) => {
         e.preventDefault();
         return;
     }
-})
+});
