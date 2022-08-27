@@ -28,11 +28,24 @@ font-size: 25px;
 }
 
 header a {
-    background-color: white;
+    background-color: rgb(232, 232, 232);
     color: black;
+}
+
+header .a-header{
+    background-color: transparent;
+    color: white;
 }
 
 header .log-in-button {
 background-color: #00FF00;
 margin-right: 14px;
+}
+
+header .log-in-button:hover {
+    background-color: #49ff49;
+}
+
+header .sign-up-button:hover {
+    background-color: #ffffff;
 }

@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/header.css' />
+    <link rel='stylesheet' href='/stylesheets/sign-up.css' />
 </head>
 <body>
+
+    <%- include('./partials/header.ejs') %>
+
     <form action="" method="POST" class="sign-up">
+        <h2>Sign up</h2>
         <div class="sign_up_form_div">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Houser" required>
@@ -21,6 +27,7 @@
             <label for="pwdRepeat">Repeat password:</label>
             <input type="password" id="pwdRepeat" name="pwdRepeat" required>
         </div>
+        <button class="sign-up-submit">Submit</button>
     </form>
 </body>
 </html>

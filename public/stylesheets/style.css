@@ -20,6 +20,7 @@ body {
   align-items: center; justify-content: space-between;
   padding: 0px;
   margin: 0px;
+  background-color: #4B0082;
 }
 
 a {
@@ -35,4 +36,5 @@ h1 {
   background-color: #4B0082;
   display: flex; flex-flow: column;
   flex: 1; height: 100%; width: 100%;
+  position: relative;
 }

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+
+form{
+    background-color: black;
+    color: white;
+    width: 300px;
+    padding: 20px 30px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    display: flex; flex-flow: column;
+    align-items: center;
+}
+
+form {
+    transform: translate(50%, -200%);
+}
+
+form h2 {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+form .sign_up_form_div{
+    display: flex; flex-flow: column;
+    margin: 10px 0px;
+}
+
+form .sign-up-submit {
+    margin: 10px 0px 0px;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 195, 255);
+    font-family: 'Oleo Script Swash Caps', cursive;
+    cursor: pointer;
+}
+
+.sign-up-submit:hover {
+    background-color: rgb(39, 205, 255);
+}
