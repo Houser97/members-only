@@ -13,7 +13,7 @@ var app = express();
 require('dotenv').config();
 
 //Establecer conexión con MongoDB.
-let mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.7rahnnq.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
+let mongoDB = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.7rahnnq.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Obtener la conexión por defecto.
