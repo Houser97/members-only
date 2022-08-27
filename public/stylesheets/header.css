@@ -7,15 +7,25 @@
 }
 
 header{
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: black;
     margin: 0px;
-    padding: 0px 16px;
+    padding: 0px 26px;
     width: 100%;
     display: flex;
     justify-content: space-between; align-items: center;
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 20px;
+}
+
+header h1 {
+    padding: 20px 0px;
+    margin: 0;
+    transition: transform 200ms ease-in-out 0s;
+}
+
+header h1:hover {
+    transform: scale(1.1);
 }
 
 header .button-header{

@@ -27,11 +27,6 @@ a {
   color: #00B7FF;
 }
 
-h1 {
-  padding: 20px 0px;
-  margin: 0;
-}
-
 .index-main-body{
   background-color: #4B0082;
   display: flex; flex-flow: column;
