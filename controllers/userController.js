@@ -1,6 +1,7 @@
 let User = require('../models/user');
 let async = require('async');
 let {body, validationResult} = require('express-validator');
+let bcryptjs = require('bcryptjs');
 
 /* Mostrar formulario de registro */
 exports.user_create_post = [
@@ -19,21 +20,32 @@ exports.user_create_post = [
 
     (req, res, next) => {
         const errors = validationResult(req);
-        const user = new User({
+        // Este USER se usa para imprimir los datos ingresados en el form
+        // en caso de que hubiera un error.
+        const user = {
             username: req.body.username,
-            password: req.body.password,
-            role: req.body.role,
-        });
+            password: req.body.pwd,
+        };
 
         if(!errors.isEmpty()){
-            router.get('/', function(req, res, next) {
-                res.render('index', { 
-                    title: 'Members Only', 
-                    user: user,
-                    errors: errors.array(),
-                });
-              });
+            res.render('index', { 
+                title: 'Members Only', 
+                user: user,
+                errors: errors.array(),
+            });
             return;  
-        };
+        } else {
+            bcryptjs.hash(req.body.pwd, 10, (err, hashedPwd)=>{
+                if(err) return next(err);
+                const user = new User({
+                    username: req.body.username,
+                    password: hashedPwd,
+                    role: req.body.role,
+                }).save(err => {
+                    if(err) return next(err);
+                    res.redirect('/');
+                })
+            })
+        }
     }
 ];

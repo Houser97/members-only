@@ -1,0 +1,8 @@
+body {
+    position: relative;
+}
+
+.errors-section {
+    position: absolute;
+    background-color: white;
+}
