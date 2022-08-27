@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+header{
+    color: white;
+    background-color: black;
+    margin: 0px;
+    padding: 0px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; align-items: center;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 20px;
+  }
+  
+  header .button-header{
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 25px;
+  }
+  
+  header .log-in-button {
+    background-color: #00FF00;
+    margin-right: 14px;
+  }
