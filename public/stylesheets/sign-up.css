@@ -13,10 +13,11 @@ form{
     transform: translate(50%,-50%);
     display: flex; flex-flow: column;
     align-items: center;
+    transition: transform 400ms ease-in-out 0s;
 }
 
 form {
-    transform: translate(50%, -200%);
+    transform: translate(50%, -200%) scale(0.1);
 }
 
 form h2 {
