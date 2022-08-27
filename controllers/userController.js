@@ -18,6 +18,22 @@ exports.user_create_post = [
                 .escape(),
 
     (req, res, next) => {
+        const errors = validationResult(req);
+        const user = new User({
+            username: req.body.username,
+            password: req.body.password,
+            role: req.body.role,
+        });
 
+        if(!errors.isEmpty()){
+            router.get('/', function(req, res, next) {
+                res.render('index', { 
+                    title: 'Members Only', 
+                    user: user,
+                    errors: errors.array(),
+                });
+              });
+            return;  
+        };
     }
 ];
