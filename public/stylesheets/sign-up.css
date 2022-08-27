@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
 
+* {
+    outline: none;
+}
 
 form{
     background-color: black;
@@ -10,15 +13,11 @@ form{
     border-radius: 20px;
     position: absolute;
     top: 50%; right: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(50%, -200%) scale(0.1);
     display: flex; flex-flow: column;
     align-items: center;
     transition: transform 400ms ease-in-out 0s, opacity 400ms ease-in-out 0s;
     opacity: 0;
-}
-
-form {
-    transform: translate(50%, -200%) scale(0.1);
 }
 
 form h2 {
@@ -26,11 +25,6 @@ form h2 {
     padding: 0;
     margin: 0;
     position: relative; /*Para contener SVG para cerrar FORM*/
-}
-
-form .sign_up_form_div{
-    display: flex; flex-flow: column;
-    margin: 10px 0px;
 }
 
 form .sign-up-submit {
@@ -53,4 +47,22 @@ form .sign-up-submit {
     right: 15px;
     top: 12px;
     cursor: pointer;
+}
+
+form .sign_up_form_div{
+    display: flex; flex-flow: column;
+    margin: 7px 0px;
+    width: 100%;
+}
+
+.sign_up_form_div input {
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.sign_up_form_div label {
+    font-size: 18px;
 }
