@@ -68,3 +68,9 @@ form .sign_up_form_div{
 .sign_up_form_div label {
     font-size: 18px;
 }
+
+@media (max-width: 330px) {
+    #log-in, #sign-up {
+        width: 220px;
+    }
+}
