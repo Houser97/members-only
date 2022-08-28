@@ -18,7 +18,7 @@ form{
     align-items: center;
     transition: transform 400ms ease-in-out 0s, opacity 400ms ease-in-out 0s;
     opacity: 0;
-    z-index: 3;
+    z-index: 15;
 }
 
 form h2 {

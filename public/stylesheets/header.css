@@ -16,6 +16,7 @@ header{
     justify-content: space-between; align-items: center;
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 20px;
+    z-index: 1;
 }
 
 header h1 {
@@ -84,10 +85,6 @@ header .svg {
 #svg-menu, #svg-close{
     display: none;
     
-}
-
-.svg-menu-close{
-    background-image: url('../images/close.svg');
 }
 
 @media (max-width: 550px) {

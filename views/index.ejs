@@ -27,12 +27,12 @@
         <h1>Welcome Back!, your role is <%- userSession.role %></h1>
     <% } %>
 
-
     <div class="window-protection"></div>
 
+    <%- include('./partials/sign-up.ejs') %> 
+    <%- include('./partials/log-in.ejs') %> 
+
     <section class="index-main-body">
-        <%- include('./partials/sign-up.ejs') %> 
-        <%- include('./partials/log-in.ejs') %> 
         <%- include('./partials/navbar.ejs') %> 
         Here goes texts
     </section>
