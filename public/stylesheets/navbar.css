@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
 nav{
     display: none; flex-flow: column;
     align-items: center; justify-content: space-evenly;
@@ -20,7 +22,7 @@ nav .button-nav{
     border-radius: 10px;
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 25px;
-    }
+}
 
 nav a {
     background-color: rgb(232, 232, 232);
@@ -45,6 +47,13 @@ nav .log-out-button {
 
 nav .log-out-button:hover {
     background-color: #fd9330f6;
+}
+
+
+nav .username-nav{
+    color: white;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 20px;
 }
 
 @media (max-width: 550px) {

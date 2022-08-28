@@ -1,5 +1,13 @@
+<% 
+    let username = '';
+    if(locals.userSession) {
+        let index = userSession.username.indexOf('@');
+        username = userSession.username.slice(0, index);
+    }
+%>
 <nav class="navbar">
     <% if(locals.userSession) { %>
+        <div class="username-nav"><%-username%></div>
         <a href="/log-out" class="button-nav log-out-button">Log out</a>
     <% } else { %>
         <a class="button-nav log-in-button log-in-button-nav">Log in</a>

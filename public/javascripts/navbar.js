@@ -23,14 +23,16 @@ const signUpButtonNav = document.querySelector('.sign-up-button-nav');
 const logInFormFromNav = document.querySelector('.log-in');
 const signUpFormFromNav = document.querySelector('.sign-up');
 
-signUpButtonNav.addEventListener('click', () => {
-    signUpFormFromNav.style.opacity = '1';
-    signUpFormFromNav.style.transform = 'translate(50%, -50%) scale(1)';
-    backgroundDiv.style.display = 'flex';
-})
-
-logInButtonNav.addEventListener('click', ()=>{
-    logInFormFromNav.style.opacity = '1';
-    logInFormFromNav.style.transform = 'translate(50%, -50%) scale(1)';
-    backgroundDiv.style.display = 'flex';
-});
+if(signUpButtonNav){
+    signUpButtonNav.addEventListener('click', () => {
+        signUpFormFromNav.style.opacity = '1';
+        signUpFormFromNav.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    })
+    
+    logInButtonNav.addEventListener('click', ()=>{
+        logInFormFromNav.style.opacity = '1';
+        logInFormFromNav.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    });
+}

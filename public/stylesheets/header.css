@@ -30,6 +30,15 @@ header h1:hover {
     transform: scale(1.1);
 }
 
+header .buttons-header{
+    display: flex;
+    align-items: center;
+}
+
+header .username-header{
+    margin-right: 20px;
+}
+
 header .button-header{
 padding: 6px 20px;
 cursor: pointer;
@@ -99,6 +108,10 @@ header .svg {
 
     .button-header-display {
         display: none;
+    }
+
+    header .username-header{
+        display:none
     }
 }
 

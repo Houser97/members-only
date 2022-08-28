@@ -17,22 +17,26 @@ if(openFormValue.textContent === 'true'){
     backgroundDiv.style.display = 'flex';
 }
 
-signUpButton.addEventListener('click', ()=>{
-    signUpForm.style.opacity = '1';
-    signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
-    backgroundDiv.style.display = 'flex';
-});
+//Se envuenve en IF para evitar que haya errores cuando se usa NAVBAR y se oculten estos.
+if(signUpButton){
+    signUpButton.addEventListener('click', ()=>{
+        signUpForm.style.opacity = '1';
+        signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    });
+
+    logInButton.addEventListener('click', ()=>{
+        logInForm.style.opacity = '1';
+        logInForm.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    });
+}
+
 
 svgClose.addEventListener('click', () => {
     signUpForm.style.opacity = '0';
     signUpForm.style.transform = 'translate(50%, -200%) scale(0.1)';
     backgroundDiv.style.display = 'none';
-});
-
-logInButton.addEventListener('click', ()=>{
-    logInForm.style.opacity = '1';
-    logInForm.style.transform = 'translate(50%, -50%) scale(1)';
-    backgroundDiv.style.display = 'flex';
 });
 
 svgCloseLogIn.addEventListener('click', () => {
