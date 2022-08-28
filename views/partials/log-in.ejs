@@ -1,9 +1,7 @@
 <% 
     let username = '';
-    let pwd = '';
     if(locals.user){
         username = user.username;
-        pwd = user.pwd;
     };
 %>
 <form action="/log-in" method="POST" class="log-in">
@@ -18,8 +16,7 @@
     </div>
     <div class="sign_up_form_div">
         <label for="pwd1">Password:</label>
-        <input type="password" id="pwd1" name="password" required
-        value= "<%- `${pwd}` %>">
+        <input type="password" id="pwd1" name="password" required>
     </div>
     <button class="log-in-submit">Submit</button>
     <%  if(locals.errors){ %>

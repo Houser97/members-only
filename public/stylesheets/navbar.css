@@ -1,15 +1,54 @@
 nav{
     display: none; flex-flow: column;
-    height: 150px;
-    width: 140px;
+    align-items: center; justify-content: space-evenly;
+    height: 200px;
+    width: 220px;
+    padding: 0; margin: 0;
     position: absolute;
     background-color: black;
     left: 100%;
     transition: transform 250ms ease-in-out 0s;
+    border-bottom-left-radius: 10px;
+    border-bottom: white 2px solid;
+    border-left: 2px white solid;
+}
+
+nav .button-nav{
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 25px;
+    }
+
+nav a {
+    background-color: rgb(232, 232, 232);
+    color: black;
+}
+
+nav .log-in-button {
+background-color: #00FF00;
+}
+
+nav .log-in-button:hover {
+    background-color: #49ff49;
+}
+
+nav .sign-up-button:hover {
+    background-color: #ffffff;
+}
+
+nav .log-out-button {
+    background-color: #fc7a00f6;
+}
+
+nav .log-out-button:hover {
+    background-color: #fd9330f6;
 }
 
 @media (max-width: 550px) {
     nav {
-        display: initial;
+        display: flex;
     }
 }

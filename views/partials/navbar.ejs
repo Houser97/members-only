@@ -1,8 +1,8 @@
 <nav class="navbar">
     <% if(locals.userSession) { %>
-        <a href="/log-out" class="button-header log-out-button">Log out</a>
+        <a href="/log-out" class="button-nav log-out-button">Log out</a>
     <% } else { %>
-        <a class="button-header log-in-button">Log in</a>
-        <a class="button-header sign-up-button">Sign up</a>
+        <a class="button-nav log-in-button log-in-button-nav">Log in</a>
+        <a class="button-nav sign-up-button sign-up-button-nav">Sign up</a>
     <% } %>   
 </nav>

@@ -1,9 +1,7 @@
 <% 
     let username = '';
-    let pwd = '';
     if(locals.user){
         username = user.username;
-        pwd = user.pwd;
     };
 %>
 <form action="" method="POST" class="sign-up">
@@ -18,8 +16,7 @@
     </div>
     <div class="sign_up_form_div">
         <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd" required
-        value= "<%- `${pwd}` %>">
+        <input type="password" id="pwd" name="pwd" required>
     </div>
     <div class="sign_up_form_div">
         <label for="pwdRepeat">Repeat password:</label>
