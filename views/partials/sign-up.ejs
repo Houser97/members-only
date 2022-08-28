@@ -1,7 +1,11 @@
 <% 
     let username = '';
+    let firstname = '';
+    let lastname = '';
     if(locals.user){
         username = user.username;
+        firstname = user.firstname;
+        lastname = user.lastname;
     };
 %>
 <form action="" method="POST" class="sign-up" id="sign-up">
@@ -10,8 +14,18 @@
     </svg>
     <h2>Sign up</h2>
     <div class="sign_up_form_div">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Houser" required 
+        value= "<%- `${firstname}` %>">
+    </div>
+    <div class="sign_up_form_div">
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Lucas" required 
+        value= "<%- `${lastname}` %>">
+    </div>
+    <div class="sign_up_form_div">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Houser" required 
+        <input type="text" id="username" name="username" placeholder="Houser@gmail.com" required 
         value= "<%- `${username}` %>">
     </div>
     <div class="sign_up_form_div">

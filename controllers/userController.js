@@ -13,6 +13,14 @@ exports.home_get = function(req, res){
 }
 /* Formulario de registro POST */
 exports.user_create_post = [
+    body('firstname', 'First name must not be empty').trim()
+                .matches("[a-z ,.'-]").withMessage('Name must not contain numbers')
+                .isLength({min: 3, max: 20})
+                .escape(),
+    body('lastname', 'Last name must not be empty').trim()
+                .matches("[a-z ,.'-]").withMessage('Name must not contain numbers')
+                .isLength({min: 3, max: 20})
+                .escape(),
     body('username', 'Username must be an email address.').isEmail()
                 .trim()
                 .escape()
@@ -31,6 +39,8 @@ exports.user_create_post = [
         // Este USER se usa para imprimir los datos ingresados en el form
         // en caso de que hubiera un error.
         const user = {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
             username: req.body.username,
             password: req.body.pwd,
         };
@@ -47,6 +57,8 @@ exports.user_create_post = [
             bcryptjs.hash(req.body.pwd, 10, (err, hashedPwd)=>{
                 if(err) return next(err);
                 const user = new User({
+                    firstname: req.body.firstname,
+                    lastname: req.body.lastname,
                     username: req.body.username,
                     password: hashedPwd,
                     role: req.body.role,
