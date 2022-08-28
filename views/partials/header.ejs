@@ -11,7 +11,10 @@
     </a>
     <div class="buttons-header">
         <% if(locals.userSession) { %>
-            <div class="username-header"><%-username%></div>
+            <div class="username-data-header">
+                <div class="username-header"><%-username%></div>
+                <div class="role-header">Role: <%- userSession.role%></div>
+            </div>
             <a href="/log-out" class="button-header-display button-header log-out-button">Log out</a>
         <% } else { %>
             <a class="button-header-display button-header log-in-button">Log in</a>

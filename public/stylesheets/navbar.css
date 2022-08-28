@@ -29,6 +29,14 @@ nav a {
     color: black;
 }
 
+nav .username-data-nav{
+    display: flex; flex-flow: column;
+    align-items: center;
+    color: white;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 20px;
+}
+
 nav .log-in-button {
 background-color: #00FF00;
 }
@@ -47,13 +55,6 @@ nav .log-out-button {
 
 nav .log-out-button:hover {
     background-color: #fd9330f6;
-}
-
-
-nav .username-nav{
-    color: white;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 20px;
 }
 
 @media (max-width: 550px) {

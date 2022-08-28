@@ -35,7 +35,9 @@ header .buttons-header{
     align-items: center;
 }
 
-header .username-header{
+header .username-data-header {
+    display: flex; flex-flow: column;
+    align-items: center;
     margin-right: 20px;
 }
 
@@ -110,7 +112,7 @@ header .svg {
         display: none;
     }
 
-    header .username-header{
+    header .username-data-header{
         display:none
     }
 }

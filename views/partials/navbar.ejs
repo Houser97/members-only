@@ -7,7 +7,10 @@
 %>
 <nav class="navbar">
     <% if(locals.userSession) { %>
-        <div class="username-nav"><%-username%></div>
+        <div class="username-data-nav">
+            <div class="username-nav"><%-username%></div>
+            <div class="role-nav">Role: <%- userSession.role%></div>
+        </div>
         <a href="/log-out" class="button-nav log-out-button">Log out</a>
     <% } else { %>
         <a class="button-nav log-in-button log-in-button-nav">Log in</a>
