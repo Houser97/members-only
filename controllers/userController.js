@@ -59,3 +59,10 @@ exports.user_create_post = [
     }
 ];
 
+/* Log out*/
+exports.log_out = function(req, res, next){
+    req.logout(function(err){
+        if(err) return next(err);
+        res.redirect('/');
+    })
+}

@@ -59,3 +59,11 @@ header .log-in-button:hover {
 header .sign-up-button:hover {
     background-color: #ffffff;
 }
+
+header .log-out-button {
+    background-color: #fc7a00f6;
+}
+
+header .log-out-button:hover {
+    background-color: #fd9330f6;
+}

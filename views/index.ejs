@@ -22,7 +22,7 @@
     <%- include('./partials/header.ejs') %>
     <div class="valueToOpenForm"><%- openFormValue %></div>
     <% if(locals.userSession) {%>
-        <h1>Welcome Back!</h1>
+        <h1>Welcome Back!, your role is <%- userSession.role %></h1>
     <% } %>
 
 
