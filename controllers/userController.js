@@ -3,12 +3,20 @@ let async = require('async');
 let {body, validationResult} = require('express-validator');
 let bcryptjs = require('bcryptjs');
 
-/* Mostrar formulario de registro */
+// Renderizar página home
+exports.home_get = function(req, res){
+    res.render('index', {
+        title: 'Members Only', 
+        userSession: req.user,
+        }
+    )
+}
+/* Formulario de registro POST */
 exports.user_create_post = [
     body('username', 'Username must be an email address.').isEmail()
                 .trim()
                 .escape()
-                .normalizeEmail(),
+                ,
     body('pwd', 'Password must not be empty').isLength({min: 8})
                 .withMessage('Password must be at least 8 characters')
                 .matches('[0-9]')
@@ -50,3 +58,4 @@ exports.user_create_post = [
         }
     }
 ];
+
