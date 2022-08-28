@@ -10,8 +10,10 @@
     <link rel='stylesheet' href='/stylesheets/footer.css' />
     <link rel='stylesheet' href='/stylesheets/sign-up.css' />
     <link rel='stylesheet' href='/stylesheets/log-in.css' />
+    <link rel='stylesheet' href='/stylesheets/navbar.css' />
     <script src="/javascripts/header.js" defer></script>
     <script src="/javascripts/sign-up.js" defer></script>
+    <script src="/javascripts/navbar.js" defer></script>
 </head>
 <% let openFormValue = false;
     if(locals.openForm){ 
@@ -31,6 +33,7 @@
     <section class="index-main-body">
         <%- include('./partials/sign-up.ejs') %> 
         <%- include('./partials/log-in.ejs') %> 
+        <%- include('./partials/navbar.ejs') %> 
         Here goes texts
     </section>
 

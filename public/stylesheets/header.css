@@ -67,3 +67,39 @@ header .log-out-button {
 header .log-out-button:hover {
     background-color: #fd9330f6;
 }
+
+header .svg {
+    width: 40px; height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#svg-container{
+    width: 40px; height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Si no se coloca, entonces cuando se sale de la MEDIA QUERY no regresan a NONE. */
+#svg-menu, #svg-close{
+    display: none;
+    
+}
+
+.svg-menu-close{
+    background-image: url('../images/close.svg');
+}
+
+@media (max-width: 550px) {
+    #svg-menu{
+        display: initial;
+    }
+
+    #svg-container{
+        display: initial;
+    }
+
+    .button-header-display {
+        display: none;
+    }
+}

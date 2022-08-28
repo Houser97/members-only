@@ -40,3 +40,5 @@ svgCloseLogIn.addEventListener('click', () => {
     logInForm.style.transform = 'translate(50%, -200%) scale(0.1)';
     backgroundDiv.style.display = 'none';
 });
+
+// Botones del navbar para abrir LOG IN, SIGN UṔ
