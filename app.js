@@ -8,6 +8,10 @@ let mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+// BCRYPTJS
+const bcryptjs = require('bcryptjs');
+//Importar modelo de usuarios para poder autenticar con PASSPORT
+const User = require('./models/user');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +33,33 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+//Funciones de PASSPORT
+//Buscar usuario y comprobar que contraseña coincida.
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    User.findOne({username: username}, (err, user) => {
+      if(err) return done(err);
+      if(!user) return done(null, false, {message: 'Incorrect username'});
+      bcryptjs.compare(password, user.password, (err, res) => {
+        if(res) return done(null, user);
+        else return done(null, false, {message: 'Incorrect password'})
+      });
+      return done(null, user);
+    })
+  })
+);
+
+//Creación de cookie para mantener al usuario en sesión
+passport.serializeUser(function(user, done){
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done){
+  User.findById(id, function(err, user){
+    done(err, user);
+  })
+})
 
 //PASSPORT
 app.use(session({secret: 'cats', resave: false, saveUninitialized: true}));
