@@ -99,6 +99,14 @@ header .svg {
     
 }
 
+.create-msg-header{
+    margin-right: 15px;
+    display: flex; flex-flow: column;
+    align-items: center;
+    color:white;
+    background-color: transparent;
+}
+
 @media (max-width: 550px) {
     #svg-menu{
         display: initial;

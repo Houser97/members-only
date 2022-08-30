@@ -17,8 +17,12 @@
     <script src="/javascripts/navbar.js" defer></script>
 </head>
 <% let openFormValue = false;
+    let userId = '';
     if(locals.openForm){ 
         openFormValue = true;
+    }
+    if(locals.userSession){
+        userId = userSession.id;
     }    
 %>
 <body>
@@ -39,6 +43,7 @@
             <label for="-message">Message:</label>
             <textarea type="text" id="message" name="message" required></textarea>
         </div>
+        <input type="hidden" name="author" required value="">
         <button class="message-submit">Create</button>
     </form>
 
