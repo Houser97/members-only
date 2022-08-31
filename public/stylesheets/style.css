@@ -28,12 +28,20 @@ a {
   color: #00B7FF;
 }
 
-.index-main-body{
+.index-main-body-container{
   background-color: #4B0082;
   display: flex; flex-flow: column;
   flex: 1; height: 100%; width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.index-main-body{
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 200px));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  height: 100%; width: 100%;
+  align-items: center; justify-content: center;
 }
 
 .window-protection {

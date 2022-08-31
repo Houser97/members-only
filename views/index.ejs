@@ -29,11 +29,11 @@
     <%- include('./partials/sign-up.ejs') %> 
     <%- include('./partials/log-in.ejs') %> 
 
-    <section class="index-main-body">
+    <section class="index-main-body-container">
         <%- include('./partials/navbar.ejs') %> 
-        <%- include('./partials/message-card.ejs') %>
-    
-        Here goes texts
+        <div class="index-main-body">
+            <%- include('./partials/message-card.ejs') %>
+        </div>
     </section>
 
     <%- include('./partials/footer.ejs') %>
