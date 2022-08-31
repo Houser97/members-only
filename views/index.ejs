@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='/stylesheets/sign-up.css' />
     <link rel='stylesheet' href='/stylesheets/log-in.css' />
     <link rel='stylesheet' href='/stylesheets/navbar.css' />
+    <link rel='stylesheet' href='/stylesheets/message-card.css' />
     <script src="/javascripts/header.js" defer></script>
     <script src="/javascripts/sign-up.js" defer></script>
     <script src="/javascripts/navbar.js" defer></script>
@@ -30,9 +31,7 @@
 
     <section class="index-main-body">
         <%- include('./partials/navbar.ejs') %> 
-        <% if(locals.userSession) {%>
-            <h1>Welcome Back!, your role is <%- userSession.role %></h1>
-        <% } %>
+        <%- include('./partials/message-card.ejs') %>
     
         Here goes texts
     </section>
