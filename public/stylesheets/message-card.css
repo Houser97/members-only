@@ -1,11 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
 .message-card{
     display: flex; flex-flow: column;
     background-color: grey;
-    align-items: center; justify-content: space-evenly;
-    padding: 10px 60px;
+    align-items: center; justify-content: space-between;
     width: 100%; height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: 'Oleo Script Swash Caps', cursive;
 }
 
 .message-card .title-message {
-    margin: 0px; padding: 0px;
+    margin: 0px; padding: 10px 15px;
+    background-color: #98fb98;
+    width: 100%;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+
+.message-card .content-message{
+    background-color: #bcd4e6;
+    flex: 1;
+    width: 100%;
+    text-align: justify;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.message-card .author-n-date{
+    display: flex;
+    align-items: center; justify-content: center;
+    height: 40px; width: 100%;
+}
+
+.author-n-date .timestamp-message, .author-n-date .author-message{
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #7b68ee;
 }
