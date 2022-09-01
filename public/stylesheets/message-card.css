@@ -14,6 +14,7 @@
 
 .message-card .title-message {
     margin: 0px; padding: 10px 15px;
+    font-size: 26px;
     background-color: #98fb98;
     width: 100%;
     display: flex;
