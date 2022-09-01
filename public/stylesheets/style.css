@@ -33,17 +33,19 @@ a {
   display: flex; flex-flow: column;
   flex: 1; height: 100%; width: 100%;
   position: relative;
-  overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .index-main-body{
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(250px, 250px));
-  grid-template-columns: repeat(auto-fill, minmax(500px, 500px));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
   height: 100%; width: 100%;
   align-items: center; justify-content: center;
   padding: 60px 0px;
   column-gap: 100px;
+  row-gap: 30px;
+  overflow: visible;
 }
 
 .window-protection {
