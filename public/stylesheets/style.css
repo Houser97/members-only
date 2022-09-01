@@ -20,7 +20,8 @@ body {
   align-items: center; justify-content: space-between;
   padding: 0px;
   margin: 0px;
-  background-color: #4B0082;
+  background-color: #9400d3;
+  /*background-color: #4B0082;*/
   position: relative;
 }
 
@@ -29,7 +30,6 @@ a {
 }
 
 .index-main-body-container{
-  background-color: #4B0082;
   display: flex; flex-flow: column;
   flex: 1; height: 100%; width: 100%;
   position: relative;

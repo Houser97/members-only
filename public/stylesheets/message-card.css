@@ -8,6 +8,8 @@
     border-radius: 15px;
     overflow: hidden;
     font-family: 'Oleo Script Swash Caps', cursive;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
 }
 
 .message-card .title-message {
@@ -39,4 +41,17 @@
     width: 100%;
     height: 100%;
     background-color: #7b68ee;
+}
+
+.svgs-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.message-card:hover > .svgs-close {
+    opacity: 1;
 }
