@@ -6,7 +6,7 @@ const messageSchema = new Schema({
     title: {type: String, required: true},
     timestamp: {type: Date, default: Date.now},
     text: {type: String, required: true},
-    author: {type: Schema.Types.ObjectId, required: true}
+    author: {type: Schema.Types.ObjectId, ref: 'Author', required: true}
 });
 
 messageSchema.virtual('timestamp_formatted').get(function(){

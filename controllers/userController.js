@@ -1,15 +1,24 @@
 let User = require('../models/user');
+let Message = require('../models/message');
 let async = require('async');
 let {body, validationResult} = require('express-validator');
 let bcryptjs = require('bcryptjs');
 
 // Renderizar página home
 exports.home_get = function(req, res){
-    res.render('index', {
-        title: 'Members Only', 
-        userSession: req.user,
+    async.parallel({
+        messages(callback){
+            Message.find().populate('Author').exec(callback);
         }
-    )
+    }, function(err, messages){
+        if(err) return next(err);
+        res.render('index', {
+            title: 'Members Only', 
+            userSession: req.user,
+            messages: messages,
+            }
+        )  
+    })
 }
 /* Formulario de registro POST */
 exports.user_create_post = [
