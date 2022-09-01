@@ -5,17 +5,17 @@ let {body, validationResult} = require('express-validator');
 let bcryptjs = require('bcryptjs');
 
 // Renderizar página home
-exports.home_get = function(req, res){
+exports.home_get = function(req, res, next){
     async.parallel({
         messages(callback){
-            Message.find().populate('Author').exec(callback);
+            Message.find().populate('author').exec(callback);
         }
-    }, function(err, messages){
+    }, function(err, results){
         if(err) return next(err);
         res.render('index', {
             title: 'Members Only', 
             userSession: req.user,
-            messages: messages,
+            messages: results.messages,
             }
         )  
     })
