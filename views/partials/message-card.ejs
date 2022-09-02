@@ -9,8 +9,16 @@
             <h2 class="title-message"><%- message.title %></h2>
             <div class="content-message"><%- message.text %></div>
             <div class="author-n-date">
-                <div class="timestamp-message"><%- message.timestamp_formatted %></div>
-                <div class="author-message"><%- message.author.firstname %> <%- message.author.lastname %></div>
+                <% if(locals.userSession) { %> 
+                    <% if(userSession.role === 'User') { %>
+                        Become a member to see this information
+                    <% } else { %>
+                        <div class="timestamp-message"><%- message.timestamp_formatted %></div>
+                        <div class="author-message"><%- message.author.firstname %> <%- message.author.lastname %></div>
+                    <% } %>
+                <% } else {%>
+                    Become a member to see this information
+                <% } %>
             </div>
         </div>
     <%})%>

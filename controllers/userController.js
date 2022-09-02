@@ -16,6 +16,7 @@ exports.home_get = function(req, res, next){
             title: 'Members Only', 
             userSession: req.user,
             messages: results.messages,
+            userSession: req.user,
             }
         )  
     })
