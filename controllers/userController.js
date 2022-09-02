@@ -88,3 +88,8 @@ exports.log_out = function(req, res, next){
         res.redirect('/');
     })
 }
+
+/* Página de error si el usuario para iniciar sesión no existe */
+exports.error_page = function(req, res, next){
+    res.render('error', {title: 'Error'});
+}
