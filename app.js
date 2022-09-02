@@ -19,7 +19,9 @@ let messageRouter = require('./routes/message');
 
 var app = express();
 
-require('dotenv').config();
+if(process.env.NODE_ENV !== 'production'){
+  require('dotenv').config();
+}
 
 //Establecer conexión con MongoDB.
 let mongoDB = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.7rahnnq.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
