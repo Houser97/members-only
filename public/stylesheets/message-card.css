@@ -44,15 +44,30 @@
     background-color: #7b68ee;
 }
 
-.svgs-close {
+.delete-message-form{
+    background-color: transparent;
     position: absolute;
     right: 10px;
     top: 10px;
+    cursor: pointer;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
-    cursor: pointer;
 }
 
-.message-card:hover > .svgs-close {
+.message-card:hover > .delete-message-form {
     opacity: 1;
+}
+
+.button-svg{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width:24px;height:24px;
+    display: flex;
+    align-items: center; justify-content: center;
+    padding: 0;
+}
+
+.svgs-close-button{
+    width: 100%; height: 100%;
 }

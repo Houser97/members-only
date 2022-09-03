@@ -42,3 +42,11 @@ exports.message_form_post = [
     }
 
 ]
+
+// Borrar mensaje
+exports.message_delete_post = function(req, res, next){
+    Message.findByIdAndRemove(req.body.idMessage, function(err){
+        if(err) return next(err);
+        res.redirect('/')
+    })
+}
