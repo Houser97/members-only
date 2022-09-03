@@ -31,13 +31,14 @@
 
     <section class="index-main-body-container">
         <%- include('./partials/navbar.ejs') %> 
-        <div class="index-main-body">
-            <%- include('./partials/message-card.ejs') %>
-        </div>
-        <% if(locals.existingUser) {%>
-            <h1>
-                <%-locals.existingUser.length %>
-            </h1>            
+        <% if(!locals.existingUser) {%>
+            <div class="index-main-body">
+                <%- include('./partials/message-card.ejs') %>
+            </div>
+        <% } else {%>
+            <div class="error-message">
+                This user already exists. Try a different one, please.
+            </div>            
         <% } %>
     </section>
 
