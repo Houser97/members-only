@@ -3,7 +3,7 @@
 nav{
     display: none; flex-flow: column;
     align-items: center; justify-content: space-evenly;
-    height: 200px;
+    height: 280px;
     width: 220px;
     padding: 0; margin: 0;
     position: absolute;
@@ -13,6 +13,7 @@ nav{
     border-bottom-left-radius: 10px;
     border-bottom: white 2px solid;
     border-left: 2px white solid;
+    z-index: 10;
 }
 
 nav .button-nav{
@@ -57,7 +58,25 @@ nav .log-out-button:hover {
     background-color: #fd9330f6;
 }
 
-@media (max-width: 550px) {
+nav .create-msg-nav {
+    display: flex; flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 20px;
+}
+
+.plus-icon{
+    transition: transform 300ms ease-in-out;
+}
+
+.create-msg-nav:hover > .plus-icon{
+    transform: rotateZ(360deg);
+}
+
+@media (max-width: 740px) {
     nav {
         display: flex;
     }

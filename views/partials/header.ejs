@@ -4,6 +4,7 @@
     </a>
     <div class="buttons-header">
         <% if(locals.userSession) { %>
+
             <div class="username-data-header">
                 <div class="username-header"><%-userSession.firstname%> <%-userSession.lastname%></div>
                 <div class="role-header">Role: <%- userSession.role%></div>
@@ -14,6 +15,7 @@
                 </svg>
                 Create MSG
             </a>
+            <a href="/code" class="button-header secret-button">Secret code</a>
             <a href="/log-out" class="button-header-display button-header log-out-button">Log out</a>
         <% } else { %>
             <a class="button-header-display button-header log-in-button">Log in</a>
