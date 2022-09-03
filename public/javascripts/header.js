@@ -6,11 +6,17 @@ const logInButton = document.querySelector('.log-in-button');
 const logInForm = document.querySelector('.log-in');
 const svgCloseLogIn = document.querySelector('.close-log-in');
 
+const secretCodeButton = document.querySelector('.secret-button');
+const secretForm = document.querySelector('.secret-code');
+const svgCloseSecret = document.querySelector('.close-secret');
+
+
 const backgroundDiv = document.querySelector('.window-protection');
 
 const openFormValue = document.querySelector('.valueToOpenForm');
 
-// Abrir formulario si hubo errores en la validación.
+// Abrir formulario si hubo errores en la validación al seleccionar el DIV que
+// contiene el valor para saber si abrir o no el formulario de nuevo.
 if(openFormValue.textContent === 'true'){
     signUpForm.style.opacity = '1';
     signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
@@ -30,6 +36,12 @@ if(signUpButton){
         logInForm.style.transform = 'translate(50%, -50%) scale(1)';
         backgroundDiv.style.display = 'flex';
     });
+
+    secretCodeButton.addEventListener('click', () => {
+        secretForm.style.opacity = '1';
+        secretForm.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    })
 }
 
 
@@ -44,5 +56,11 @@ svgCloseLogIn.addEventListener('click', () => {
     logInForm.style.transform = 'translate(50%, -200%) scale(0.1)';
     backgroundDiv.style.display = 'none';
 });
+
+svgCloseSecret.addEventListener('click', () => {
+    secretForm.style.opacity = '0';
+    secretForm.style.transform = 'translate(50%, -200%) scale(0.1)';
+    backgroundDiv.style.display = 'none';
+})
 
 // Botones del navbar para abrir LOG IN, SIGN UṔ
