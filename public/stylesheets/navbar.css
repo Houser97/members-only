@@ -76,7 +76,7 @@ nav .create-msg-nav {
     transform: rotateZ(360deg);
 }
 
-@media (max-width: 740px) {
+@media (max-width: 900px) {
     nav {
         display: flex;
     }
