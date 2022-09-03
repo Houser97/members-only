@@ -13,7 +13,7 @@ nav{
     border-bottom-left-radius: 10px;
     border-bottom: white 2px solid;
     border-left: 2px white solid;
-    z-index: 10;
+    z-index: 1;
 }
 
 nav .button-nav{

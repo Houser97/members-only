@@ -23,6 +23,9 @@ const signUpButtonNav = document.querySelector('.sign-up-button-nav');
 const logInFormFromNav = document.querySelector('.log-in');
 const signUpFormFromNav = document.querySelector('.sign-up');
 
+const secretCodeButtonNav = document.querySelector('.secret-button-nav');
+const secretFormNav = document.querySelector('.secret-code');
+
 if(signUpButtonNav){
     signUpButtonNav.addEventListener('click', () => {
         signUpFormFromNav.style.opacity = '1';
@@ -35,4 +38,12 @@ if(signUpButtonNav){
         logInFormFromNav.style.transform = 'translate(50%, -50%) scale(1)';
         backgroundDiv.style.display = 'flex';
     });
+}
+
+if(secretCodeButtonNav){
+    secretCodeButtonNav.addEventListener('click', () => {
+        secretFormNav.style.opacity = '1';
+        secretFormNav.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    })
 }
