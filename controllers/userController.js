@@ -111,3 +111,19 @@ exports.log_out = function(req, res, next){
 exports.error_page = function(req, res, next){
     res.render('errorUser', {title: 'Error'});
 }
+
+/* Formulario secret code POST, actualizar usuario */
+exports.update_user_role = function(req, res, next){
+    const user = {
+        firstname: req.body.firstnameSecret,
+        lastname: req.body.lastnameSecret,
+        username: req.body.usernameSecret,
+        password: req.body.pwdSecret,
+        _id: req.body.idSecret,
+        role: 'Member',
+    };
+    User.findByIdAndUpdate(req.body.idSecret, user, {}, function(err){
+        if(err) return next(err);
+        res.redirect('/');
+    })
+}

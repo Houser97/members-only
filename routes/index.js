@@ -22,5 +22,7 @@ router.get('/log-out', user_controller.log_out);
 /* Página de error si el usuario para iniciar sesión no existe */
 router.get('/error_not_found', user_controller.error_page);
 
+/* Ruta para procesar actualización del role */
+router.post('/secret-code', user_controller.update_user_role);
 
 module.exports = router;
