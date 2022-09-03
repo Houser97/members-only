@@ -1,3 +1,15 @@
+<%# Función para abrir secret-code-form con onClick%>
+<script defer>
+    const openSecretForm = () => {
+        const secretForm = document.querySelector('.secret-code');
+        const svgCloseSecret = document.querySelector('.close-secret');
+        const backgroundDiv = document.querySelector('.window-protection');
+
+        secretForm.style.opacity = '1';
+        secretForm.style.transform = 'translate(50%, -50%) scale(1)';
+        backgroundDiv.style.display = 'flex';
+    }
+</script>
 <header>
     <a href="/" class="a-header">
         <h1>Members only</h1>
@@ -15,7 +27,7 @@
                 </svg>
                 Create MSG
             </a>
-            <a href="/code" class="button-header secret-button">Secret code</a>
+            <a class="button-header secret-button">Secret code</a>
             <a href="/log-out" class="button-header-display button-header log-out-button">Log out</a>
         <% } else { %>
             <a class="button-header-display button-header log-in-button">Log in</a>

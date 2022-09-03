@@ -36,7 +36,9 @@ if(signUpButton){
         logInForm.style.transform = 'translate(50%, -50%) scale(1)';
         backgroundDiv.style.display = 'flex';
     });
+}
 
+if(secretCodeButton){
     secretCodeButton.addEventListener('click', () => {
         secretForm.style.opacity = '1';
         secretForm.style.transform = 'translate(50%, -50%) scale(1)';
