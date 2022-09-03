@@ -55,29 +55,47 @@ exports.user_create_post = [
             password: req.body.pwd,
         };
 
-        if(!errors.isEmpty()){
-            res.render('index', { 
-                title: 'Members Only', 
-                user: user,
-                errors: errors.array(),
-                openForm: true,
-            });
-            return;  
-        } else {
-            bcryptjs.hash(req.body.pwd, 10, (err, hashedPwd)=>{
-                if(err) return next(err);
-                const user = new User({
-                    firstname: req.body.firstname,
-                    lastname: req.body.lastname,
-                    username: req.body.username,
-                    password: hashedPwd,
-                    role: req.body.role,
-                }).save(err => {
+        // Revisar que el usuario no exista ya.
+        async.parallel({
+            user(callback){
+                User.find({username: {$eq: req.body.username}}).exec(callback)
+            }
+        }, function(err, result){
+            if(err) return next(err);
+            if(result.user.length > 0){
+                res.render('index', { 
+                    title: 'Members Only', 
+                    user: user,
+                    errors: errors.array(),
+                    openForm: false,
+                    existingUser: result.user,
+                });
+                return;
+            }
+            if(!errors.isEmpty()){
+                res.render('index', { 
+                    title: 'Members Only', 
+                    user: user,
+                    errors: errors.array(),
+                    openForm: true,
+                });
+                return;  
+            } else {
+                bcryptjs.hash(req.body.pwd, 10, (err, hashedPwd)=>{
                     if(err) return next(err);
-                    res.redirect('/');
+                    const user = new User({
+                        firstname: req.body.firstname,
+                        lastname: req.body.lastname,
+                        username: req.body.username,
+                        password: hashedPwd,
+                        role: req.body.role,
+                    }).save(err => {
+                        if(err) return next(err);
+                        res.redirect('/');
+                    })
                 })
-            })
-        }
+            }
+        })
     }
 ];
 
@@ -91,5 +109,5 @@ exports.log_out = function(req, res, next){
 
 /* Página de error si el usuario para iniciar sesión no existe */
 exports.error_page = function(req, res, next){
-    res.render('error', {title: 'Error'});
+    res.render('errorUser', {title: 'Error'});
 }

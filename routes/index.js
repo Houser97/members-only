@@ -13,14 +13,14 @@ router.post('/', user_controller.user_create_post);
 // POST de LOG IN
 router.post('/log-in', passport.authenticate('local', {
   successRedirect:'/',
-  failureRedirect:'/error'
+  failureRedirect:'/error_not_found'
 }));
 
 // Log out
 router.get('/log-out', user_controller.log_out);
 
 /* Página de error si el usuario para iniciar sesión no existe */
-router.get('/error', user_controller.error_page);
+router.get('/error_not_found', user_controller.error_page);
 
 
 module.exports = router;
