@@ -33,19 +33,24 @@
     <%- include('./partials/sign-up.ejs') %> 
     <%- include('./partials/log-in.ejs') %> 
 
-
-    <form action="" method="POST" class="message-form">
-        <div class="div-form-message">
-            <label for="title-message">Title:</label>
-            <input type="text" id="title-message" name="title" required>
+    <% if(locals.userSession) { %>
+        <form action="" method="POST" class="message-form">
+            <div class="div-form-message">
+                <label for="title-message">Title:</label>
+                <input type="text" id="title-message" name="title" required>
+            </div>
+            <div class="div-form-message">
+                <label for="-message">Message:</label>
+                <textarea type="text" id="message" name="message" required></textarea>
+            </div>
+            <input type="hidden" name="author" required value=<%- userId %>>
+            <button class="message-submit">Create</button>
+        </form>
+    <% } else  {%>
+        <div class="no-user-message">
+            You must log in to create messages
         </div>
-        <div class="div-form-message">
-            <label for="-message">Message:</label>
-            <textarea type="text" id="message" name="message" required></textarea>
-        </div>
-        <input type="hidden" name="author" required value=<%- userId %>>
-        <button class="message-submit">Create</button>
-    </form>
+    <% } %>
 
 
     <%- include('./partials/footer.ejs') %>
