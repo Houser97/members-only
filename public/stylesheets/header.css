@@ -7,8 +7,9 @@
 }
 
 header{
-    color: rgb(255, 255, 255);
-    background-color: black;
+    color: white;
+    background-color: white;
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     margin: 0px;
     padding: 20px 26px;
     width: 100%;
