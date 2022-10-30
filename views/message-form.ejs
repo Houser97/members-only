@@ -35,6 +35,7 @@
 
     <% if(locals.userSession) { %>
         <form action="" method="POST" class="message-form">
+            <%- include('./partials/navbar.ejs') %> 
             <div class="div-form-message">
                 <label for="title-message">Title:</label>
                 <input type="text" id="title-message" name="title" required>

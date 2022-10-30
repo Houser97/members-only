@@ -64,8 +64,10 @@ svgCloseLogIn.addEventListener('click', () => {
     backgroundDiv.style.display = 'none';
 });
 
-svgCloseSecret.addEventListener('click', () => {
-    secretForm.style.opacity = '0';
-    secretForm.style.transform = 'translate(50%, -200%) scale(0.1)';
-    backgroundDiv.style.display = 'none';
-})
+if(svgCloseSecret){
+    svgCloseSecret.addEventListener('click', () => {
+        secretForm.style.opacity = '0';
+        secretForm.style.transform = 'translate(50%, -200%) scale(0.1)';
+        backgroundDiv.style.display = 'none';
+    })
+}

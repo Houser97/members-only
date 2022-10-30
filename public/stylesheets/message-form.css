@@ -6,7 +6,8 @@
     display: flex; flex-flow: column;
     align-items: center; justify-content: center;
     font-family: 'Oleo Script Swash Caps', cursive;
-    
+    position: relative;
+    padding: 0px;
 }
 
 .no-user-message{
@@ -15,13 +16,14 @@
     display: flex; flex-flow: column;
     align-items: center; justify-content: center;
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 80px;
+    font-size: 50px;
+    text-align: center;
 }
 
 form .div-form-message{
     display: flex; flex-flow: column;
     width: 70%;
-    margin: 10px 0px;
+    margin: 20px 0px;
 }
 
 form .div-form-message input {
@@ -52,7 +54,7 @@ form .div-form-message label {
 }
 
 form .message-submit {
-    margin: 10px 0px 0px;
+    margin: 10px 0px;
     font-size: 20px;
     padding: 10px 26px;
     border: none;
