@@ -43,14 +43,14 @@ a {
 
 .index-main-body{
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(250px, 250px));
-  grid-template-columns: repeat(auto-fit, minmax(290px, 500px));
+  grid-template-rows: repeat(auto-fit, minmax(320px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   height: 100%; width: 100%; 
   align-items: center; justify-content: center;
-  padding: 60px 22px;
-  column-gap: 100px;
-  grid-auto-rows: 250px;
-  row-gap: 30px;
+  padding: 60px 60px;
+  column-gap: 60px;
+  grid-auto-rows: 320px;
+  row-gap: 50px;
   overflow: hidden;
 }
 
@@ -76,4 +76,10 @@ a {
   align-items: center; justify-content: center;
   font-family: 'Oleo Script Swash Caps', cursive;
   font-size: 60px;
+}
+
+@media (max-width: 600px) {
+  .index-main-body{
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  } 
 }
