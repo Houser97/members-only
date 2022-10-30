@@ -7,7 +7,8 @@
 }
 
 footer {
-  background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background: linear-gradient(89.8deg, rgb(39, 115, 255) 4.3%, rgb(62, 211, 232) 101.4%);
     color: white;
     width: 100%;
     font-size: 22px;

@@ -9,6 +9,7 @@ nav{
     position: absolute;
     background-color: black;
     background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background: linear-gradient(89.8deg, rgb(39, 115, 255) 4.3%, rgb(62, 211, 232) 101.4%);
     left: 100%;
     transition: transform 250ms ease-in-out 0s;
     border-bottom-left-radius: 10px;
@@ -66,7 +67,7 @@ nav .create-msg-nav {
     justify-content: center;
     align-items: center;
     color:white;
-    background-color: black;
+    background-color: transparent;
     font-family: 'Oleo Script Swash Caps', cursive;
     font-size: 20px;
 }
