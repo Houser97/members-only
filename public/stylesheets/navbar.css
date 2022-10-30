@@ -20,6 +20,11 @@ nav{
     z-index: 1;
 }
 
+nav *{
+    list-style-type: none;
+    text-decoration: none;
+}
+
 nav .button-nav{
     padding: 6px 20px;
     cursor: pointer;
