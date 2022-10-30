@@ -93,6 +93,19 @@ a {
   .error-message{
     font-size: 50px;
   }
+
+  .index-main-body{
+    padding: 60px 20px;
+  }
+
+  .index-main-body-container{
+    display: flex; flex-flow: column;
+    width: 100%; flex: 1;
+    position: relative;
+    justify-content: center;
+    padding: 0px 0px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
