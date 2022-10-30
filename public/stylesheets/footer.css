@@ -17,6 +17,18 @@ footer {
     font-family: 'Oleo Script Swash Caps', cursive;
 }
 
+footer a {
+  color: white;
+}
+
+.github-svg{
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.github-svg:hover{
+  transform: scale(1.4) rotate(360deg);
+}
 
 @media (max-width: 350px) {
   footer {
