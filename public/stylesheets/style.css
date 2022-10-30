@@ -27,6 +27,8 @@ body {
   background: radial-gradient(343px at 46.3% 47.5%, rgb(242, 242, 242) 0%, rgb(241, 241, 241) 72.9%);
   /*background-color: #4B0082;*/
   position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 a {
@@ -42,14 +44,14 @@ a {
 .index-main-body{
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(250px, 250px));
-  grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 500px));
   height: 100%; width: 100%; 
   align-items: center; justify-content: center;
-  padding: 60px 0px;
+  padding: 60px 22px;
   column-gap: 100px;
+  grid-auto-rows: 250px;
   row-gap: 30px;
-  overflow: visible;
-  min-width: 0;
+  overflow: hidden;
 }
 
 .window-protection {

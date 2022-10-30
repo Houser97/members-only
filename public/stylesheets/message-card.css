@@ -6,7 +6,7 @@
     background-color: black;
     color: white;
     align-items: center; justify-content: space-between;
-    width: 500px; height: 250px;
+    width: 100%; height: 250px;
     border-radius: 15px;
     overflow: hidden;
     font-family: 'Oleo Script Swash Caps', cursive;
@@ -19,6 +19,7 @@
     margin: 0px; padding: 10px 15px;
     font-size: 26px;
     background-color: rgb(0, 0, 0);
+    background: linear-gradient(89.8deg, rgb(39, 115, 255) 4.3%, rgb(62, 211, 232) 101.4%);
     color: white;
     width: 100%;
     display: flex;
@@ -40,6 +41,7 @@
     display: flex;
     align-items: center; justify-content: center;
     height: 40px; width: 100%;
+    background: linear-gradient(89.8deg, rgb(39, 115, 255) 4.3%, rgb(62, 211, 232) 101.4%);
 }
 
 .author-n-date .timestamp-message, .author-n-date .author-message{
@@ -48,7 +50,7 @@
     width: 100%;
     height: 100%;
     background-color: #7b68ee;
-    background-color: black;
+    background-color: transparent;
 }
 
 .delete-message-form{
