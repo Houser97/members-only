@@ -24,11 +24,11 @@ exports.home_get = function(req, res, next){
 /* Formulario de registro POST */
 exports.user_create_post = [
     body('firstname', 'First name must not be empty').trim()
-                .matches("[a-z ,.'-]").withMessage('Name must not contain numbers')
-                .isLength({min: 3, max: 20})
+                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers')
+                .isLength({min: 3, max: 20}).withMessage('First name should contain at least 3 letter and less than 20.')
                 .escape(),
     body('lastname', 'Last name must not be empty').trim()
-                .matches("[a-z ,.'-]").withMessage('Name must not contain numbers')
+                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers')
                 .isLength({min: 3, max: 20})
                 .escape(),
     body('username', 'Username must be an email address.').isEmail()
