@@ -73,13 +73,16 @@ exports.user_create_post = [
                 return;
             }
             if(!errors.isEmpty()){
-                res.render('index', { 
-                    title: 'Members Only', 
-                    user: user,
-                    errors: errors.array(),
-                    openForm: true,
-                });
-                return;  
+                Message.find().populate('author').exec(function(err, messages){
+                    res.render('index', { 
+                        title: 'Members Only', 
+                        user: user,
+                        errors: errors.array(),
+                        openForm: true,
+                        messages: messages,
+                    });
+                    return;    
+                })
             } else {
                 bcryptjs.hash(req.body.pwd, 10, (err, hashedPwd)=>{
                     if(err) return next(err);
