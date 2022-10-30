@@ -2,8 +2,6 @@
 
 *{
   box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 html{
@@ -76,7 +74,7 @@ a {
 /*Subcontainer para los formularios*/
 .subcontainer-forms{
   background-color: transparent;
-  width: 100%; height: 100vh;
+  width: 100%; height: 140vh;
   position: absolute;
   z-index: 10;
   pointer-events: none;
