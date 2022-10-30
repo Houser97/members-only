@@ -20,6 +20,7 @@
     opacity: 0;
     z-index: 15;
     pointer-events: all;
+    border: 2px white solid;
 }
 
 form h2 {
