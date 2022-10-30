@@ -28,7 +28,7 @@ if(signUpButton){
     signUpButton.addEventListener('click', ()=>{
         signUpForm.style.opacity = '1';
         signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
-        backgroundDiv.style.display = 'flex';
+        backgroundDiv.style.display = 'flex';   
     });
 
     logInButton.addEventListener('click', ()=>{
@@ -41,7 +41,7 @@ if(signUpButton){
 if(secretCodeButton){
     secretCodeButton.addEventListener('click', () => {
         secretForm.style.opacity = '1';
-        secretForm.style.transform = 'translate(50%, -50%) scale(1)';
+        secretForm.style.transform = 'translate(50%, -200%) scale(1)';
         backgroundDiv.style.display = 'flex';
     })
 }
@@ -64,5 +64,3 @@ svgCloseSecret.addEventListener('click', () => {
     secretForm.style.transform = 'translate(50%, -200%) scale(0.1)';
     backgroundDiv.style.display = 'none';
 })
-
-// Botones del navbar para abrir LOG IN, SIGN UṔ
