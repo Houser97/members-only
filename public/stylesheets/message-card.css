@@ -82,3 +82,9 @@
 .svgs-close-button{
     width: 100%; height: 100%;
 }
+
+@media (max-width: 580px) {
+    .message-card .author-n-date{
+        font-size: 16px;
+    }
+}
