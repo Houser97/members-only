@@ -19,7 +19,7 @@ const openFormValue = document.querySelector('.valueToOpenForm');
 // contiene el valor para saber si abrir o no el formulario de nuevo.
 if(openFormValue.textContent === 'true'){
     signUpForm.style.opacity = '1';
-    signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
+    signUpForm.style.transform = 'translate(50%, -20%) scale(1)';
     backgroundDiv.style.display = 'flex';
 }
 
@@ -27,13 +27,14 @@ if(openFormValue.textContent === 'true'){
 if(signUpButton){
     signUpButton.addEventListener('click', ()=>{
         signUpForm.style.opacity = '1';
-        signUpForm.style.transform = 'translate(50%, -50%) scale(1)';
+        signUpForm.style.transform = 'translate(50%, -30%) scale(1)';
         backgroundDiv.style.display = 'flex';   
     });
 
     logInButton.addEventListener('click', ()=>{
         logInForm.style.opacity = '1';
         logInForm.style.transform = 'translate(50%, -50%) scale(1)';
+        logInForm.style.top = 'translate(50%, -50%) scale(1)';
         backgroundDiv.style.display = 'flex';
     });
 }
