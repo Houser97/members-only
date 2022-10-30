@@ -13,11 +13,14 @@ const bcryptjs = require('bcryptjs');
 //Importar modelo de usuarios para poder autenticar con PASSPORT
 const User = require('./models/user');
 
+const cors = require('cors')
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let messageRouter = require('./routes/message');
 
 var app = express();
+app.use(cors())
 
 if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
