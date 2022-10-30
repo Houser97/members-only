@@ -43,6 +43,7 @@
     align-items: center; justify-content: center;
     height: 40px; width: 100%;
     background: linear-gradient(89.8deg, rgb(39, 115, 255) 4.3%, rgb(62, 211, 232) 101.4%);
+    font-size: 20px;
 }
 
 .author-n-date .timestamp-message, .author-n-date .author-message{
