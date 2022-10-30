@@ -30,6 +30,7 @@ form .div-form-message input {
     padding: 5px 10px;
     border: none;
     border-radius: 10px;
+    border: 2px solid black;
 }
 
 form .div-form-message label {
@@ -44,6 +45,10 @@ form .div-form-message label {
     padding: 10px 10px;
     font-size: 22px;
     letter-spacing: 1px;
+    max-width: 100%;
+    max-height: 100%;
+    resize: none;
+    border: 2px solid black;
 }
 
 form .message-submit {
