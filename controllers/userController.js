@@ -24,23 +24,23 @@ exports.home_get = function(req, res, next){
 /* Formulario de registro POST */
 exports.user_create_post = [
     body('firstname', 'First name must not be empty').trim()
-                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers')
+                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers.')
                 .isLength({min: 3, max: 20}).withMessage('First name should contain at least 3 letter and less than 20.')
                 .escape(),
-    body('lastname', 'Last name must not be empty').trim()
-                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers')
+    body('lastname', 'Last name must not be empty.').trim()
+                .matches("[a-zA-Z ,.'-]").withMessage('Name must not contain numbers.')
                 .isLength({min: 3, max: 20})
                 .escape(),
-    body('username', 'Username must be an email address.').isEmail()
+    body('username', 'Username must be an email address.').isEmail().withMessage('Please, add a valid email.')
                 .trim()
                 .escape()
                 ,
-    body('pwd', 'Password must not be empty').isLength({min: 8})
-                .withMessage('Password must be at least 8 characters')
+    body('pwd', 'Password must not be empty.').isLength({min: 8})
+                .withMessage('Password must be at least 8 characters.')
                 .matches('[0-9]')
-                .withMessage('Password must contain at least 1 number')
+                .withMessage('Password must contain at least 1 number.')
                 .matches('[A-Z]')
-                .withMessage('Password must contain at least 1 uppercase letter')
+                .withMessage('Password must contain at least 1 uppercase letter.')
                 .trim()
                 .escape(),
 
