@@ -113,7 +113,9 @@ a {
 }
 
 .no-user-message{
-  height: 100vh;
+  display: flex; flex-flow: column;
+  flex: 1;
+  position: relative;
 }
 
 @media (max-width: 600px) {
