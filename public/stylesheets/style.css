@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  color-scheme: light only;
+}
+
 html{
   width: 100%;
   display: flex; flex-flow: column;
