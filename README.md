@@ -14,7 +14,7 @@ The application uses Passport to authenticate users and salting to protect user 
   <img src="public/assets/README_Images/AdminMembers.JPG">
 </p>
 
-The data is validated in the BACKEND to avoid problems with symbols not considered, to avoid injection of HTML elements and to prevent users from entering an email already used.
+The data is validated in the BACKEND to avoid problems with symbols not considered, to avoid injection of HTML elements and to prevent users from entering an email already used. Likewise, messages are also validated to prevent issues from arising.
 
 <p align="center">
   <img src="public/assets/README_Images/MembersSign.JPG">
