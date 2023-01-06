@@ -92,9 +92,12 @@ exports.user_create_post = [
                         username: req.body.username,
                         password: hashedPwd,
                         role: req.body.role,
-                    }).save(err => {
+                    }).save((err, user) => {
                         if(err) return next(err);
-                        res.redirect('/');
+                        req.login(user, (err) => {
+                            if(err) return next(err);
+                            res.redirect('/');
+                        })
                     })
                 })
             }
