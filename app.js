@@ -12,6 +12,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcryptjs = require('bcryptjs');
 //Importar modelo de usuarios para poder autenticar con PASSPORT
 const User = require('./models/user');
+const favicon = require('serve-favicon');
 
 const cors = require('cors')
 
